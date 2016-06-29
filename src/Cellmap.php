@@ -558,12 +558,12 @@ class Cellmap
         $colspan = $node->getAttribute("colspan");
         $rowspan = $node->getAttribute("rowspan");
 
-        if (!$colspan) {
+        if (empty($colspan)) {
             $colspan = 1;
             $node->setAttribute("colspan", 1);
         }
 
-        if (!$rowspan) {
+        if (empty($rowspan)) {
             $rowspan = 1;
             $node->setAttribute("rowspan", 1);
         }
